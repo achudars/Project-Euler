@@ -1,10 +1,10 @@
 Project-Euler
 =============
 <code>
-PE001 - Multiples of 3 and 5 (below 1000)
-PE002 - Even Fibonacci numbers (that are smaller than 4000000)
-PE003 - Largest prime factor (of the number 600851475143)
-PE004 - Largest palindrome product
+*PE001 - Multiples of 3 and 5 (below 1000)
+*PE002 - Even Fibonacci numbers (that are smaller than 4000000)
+*PE003 - Largest prime factor (of the number 600851475143)
+*PE004 - Largest palindrome product
 PE005 - Smallest multiple
 PE006 - Sum square difference
 PE007 - 10001st prime

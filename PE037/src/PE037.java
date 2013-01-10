@@ -4,6 +4,7 @@ public class PE037 {
 
 		int primeCounter = 0;
 		int truncatableRL, truncatableLR = 0;
+		int sum = 0;
 		for (Integer i = 23; i < 1000000; i++) {
 			if (isPrime(i)) {
 				truncatableRL = i;
@@ -16,6 +17,7 @@ public class PE037 {
 					if (isPrime(truncatableRL) && isPrime(truncatableLR)) {
 						if (String.valueOf(truncatableRL).length() == 1) {
 							primeCounter++;
+							sum += i;
 							System.out.println("> " + i);
 						}
 					} else {
@@ -24,7 +26,8 @@ public class PE037 {
 				} while (String.valueOf(truncatableRL).length() >= 0);
 			}
 		}
-		System.out.println("Answer: " + primeCounter);
+		System.out.println("answer: " + sum);
+		System.out.println("prime counter: " + primeCounter);
 	}
 
 	// prime number checking function

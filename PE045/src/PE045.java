@@ -1,8 +1,9 @@
 public class PE045 {
 
 	public static void main(String[] args) {
-
-		// all HEXAGONAL numbers are also TRIANGLE numbers, so ignore TRAINGLE number calculation
+		long startTime = System.nanoTime();
+		// all HEXAGONAL numbers are also TRIANGLE numbers, so ignore TRAINGLE
+		// number calculation
 
 		int p = 165;
 		long pentagonal = calculatePentagon(p);
@@ -19,6 +20,9 @@ public class PE045 {
 		}
 		System.out.println("Answer: " + hexagonal);
 
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	// pentagonal number calculation

@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class PE047 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		int answer = 0;
 
 		for (int i = 100000; i < 1000000; i++) {
@@ -34,6 +34,10 @@ public class PE047 {
 		}
 
 		System.out.println("Answer: " + answer);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	public static List<Integer> primeFactors(int number) {

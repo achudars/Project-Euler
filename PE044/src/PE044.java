@@ -4,7 +4,7 @@ import java.util.TreeSet;
 public class PE044 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		// set maximum to test the results against
 		int result = Integer.MAX_VALUE;
 		int i = 1;
@@ -36,6 +36,10 @@ public class PE044 {
 		}
 
 		System.out.println("Answer: " + result);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 
 	}
 

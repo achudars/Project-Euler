@@ -310,7 +310,7 @@ public class PE042 {
 				"WORKS", "WORLD", "WORRY", "WORTH", "WOULD", "WRITE", "WRITER",
 				"WRITING", "WRONG", "YARD", "YEAH", "YEAR", "YES", "YESTERDAY",
 				"YET", "YOU", "YOUNG", "YOUR", "YOURSELF", "YOUTH" };
-
+		long startTime = System.nanoTime();
 		int triangleCounter = 0;
 		for (int i = 0; i < stringArray.length; i++) {
 			if (isTriangle(getWordValue(stringArray[i]))) {
@@ -320,6 +320,9 @@ public class PE042 {
 
 		System.out.println("Answer: " + triangleCounter);
 
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	// pass n, get triangle number

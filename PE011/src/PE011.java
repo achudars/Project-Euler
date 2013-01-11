@@ -1,5 +1,6 @@
 public class PE011 {
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		// 20 x 20 grid 
 		int grid[][] = {
 				
@@ -74,6 +75,11 @@ public class PE011 {
 		}
 
 		System.out.println("Answer: " + greatestProduct);
+		
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
+
 	}
 
 }

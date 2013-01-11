@@ -1,6 +1,7 @@
 public class PE035 {
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		int count = 0;
 		// loop through the range
 		for (Integer i = 2; i < 1000000; i++) {
@@ -11,6 +12,10 @@ public class PE035 {
 			}
 		}
 		System.out.println("Answer: " + count);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	public static boolean hasPrimeRotations(Integer number) {

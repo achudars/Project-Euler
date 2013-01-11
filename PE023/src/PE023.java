@@ -7,7 +7,12 @@ public class PE023 {
 	boolean[] abundant = new boolean[limit + 1];
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		System.out.println("Answer: " + (new PE023()).getAnswer());
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	public static int getSumOfFactors(int n) {

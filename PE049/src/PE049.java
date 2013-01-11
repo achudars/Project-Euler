@@ -4,6 +4,7 @@ import java.util.Map;
 public class PE049 {
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		// Possible digits here are 1,2,3, and 4
 		// possiblePermutations("1234", 4, new StringBuffer());
 		String answer = null, first, second, third = "";
@@ -22,6 +23,10 @@ public class PE049 {
 			}
 		}
 		System.out.println("Answer: " + answer);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	// prime number checking function

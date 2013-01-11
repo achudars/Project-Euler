@@ -7,7 +7,7 @@ public class PE038 {
 	static SortedSet<Integer> elements = new TreeSet<Integer>();
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		permutation("12345678");
 		Integer largestPan = 0;
 		String concatenation = "";
@@ -22,7 +22,8 @@ public class PE038 {
 					if (Integer.parseInt(concatenation) > largestPan) {
 						largestPan = Integer.parseInt(concatenation);
 					}
-					System.out.println("n(1,2,3,4,5): " + concatenation + " | m = " + m);
+					System.out.println("n(1,2,3,4,5): " + concatenation
+							+ " | m = " + m);
 				}
 
 			}
@@ -34,7 +35,8 @@ public class PE038 {
 					if (Integer.parseInt(concatenation) > largestPan) {
 						largestPan = Integer.parseInt(concatenation);
 					}
-					System.out.println("n(1,2,3,4): " + concatenation + " | m = " + m);
+					System.out.println("n(1,2,3,4): " + concatenation
+							+ " | m = " + m);
 				}
 			}
 			// n(1,2,3)
@@ -45,7 +47,8 @@ public class PE038 {
 					if (Integer.parseInt(concatenation) > largestPan) {
 						largestPan = Integer.parseInt(concatenation);
 					}
-					System.out.println("n(1,2,3): " + concatenation + " | m = " + m);
+					System.out.println("n(1,2,3): " + concatenation + " | m = "
+							+ m);
 				}
 			}
 			// n(1,2)
@@ -55,7 +58,8 @@ public class PE038 {
 					if (Integer.parseInt(concatenation) > largestPan) {
 						largestPan = Integer.parseInt(concatenation);
 					}
-					System.out.println("n(1,2): " + concatenation + " | m = " + m);
+					System.out.println("n(1,2): " + concatenation + " | m = "
+							+ m);
 				}
 			}
 
@@ -63,6 +67,9 @@ public class PE038 {
 
 		System.out.println("Answer: " + largestPan);
 
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	public static void permutation(String str) {

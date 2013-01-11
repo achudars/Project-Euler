@@ -3,7 +3,7 @@ import java.math.BigInteger;
 public class PE015 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		// basically we are looking for central binomial coefficient (largest
 		// number in the row) in Pascal's triangle
 		// (2*n)! <--- upper
@@ -18,6 +18,10 @@ public class PE015 {
 		BigInteger result = upper.divide(lower);
 
 		System.out.println("Answer: " + result);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 
 	};
 

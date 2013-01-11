@@ -3,7 +3,7 @@ import java.math.BigInteger;
 public class PE048 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		String variable = "0";
 		BigInteger sum = BigInteger.ZERO;
 
@@ -20,8 +20,13 @@ public class PE048 {
 		// 3. get first ten numbers
 		// 4. reverse back
 		// 5. enjoy
-		String answer = new StringBuffer(new StringBuffer(sum.toString()).reverse().toString().substring(0, 10)).reverse().toString();
+		String answer = new StringBuffer(new StringBuffer(sum.toString())
+				.reverse().toString().substring(0, 10)).reverse().toString();
 		System.out.println("Answer: " + answer);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 
 	};
 }

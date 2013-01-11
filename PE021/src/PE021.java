@@ -1,16 +1,19 @@
-
 public class PE021 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		int sum = 0;
 		for (int i = 1; i < 10000; i++) {
 			if (isAmicable(i)) {
 				sum += i;
-				//System.out.println("AMICABLE: " + i);
+				// System.out.println("AMICABLE: " + i);
 			}
 		}
 		System.out.println("Answer: " + sum);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	public static boolean isAmicable(int n) {
@@ -28,12 +31,13 @@ public class PE021 {
 
 		for (int i = 1; i < n; i++) {
 			if (n % i == 0) {
-				//System.out.print(i + "  ");
+				// System.out.print(i + "  ");
 				numberOfFactors++;
 				result = result + i;
 			}
 		}
-		//System.out.println("\nSum of Factors for number " + n + " : " + result);
+		// System.out.println("\nSum of Factors for number " + n + " : " +
+		// result);
 		// System.out.println("Number of Factors: " + numberOfFactors);
 
 		return result;

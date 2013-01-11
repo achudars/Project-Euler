@@ -1,6 +1,7 @@
 public class PE046 {
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		int prev = 3;
 		int answer = 0;
 		glass: for (int odd = 5; odd < 10000; odd = odd + 2) {
@@ -8,7 +9,8 @@ public class PE046 {
 				if (isPrime(prime)) {
 					for (int n = 0; n < 100; n++) {
 						if ((prime + (2 * (n * n))) == odd) {
-							// System.out.println(odd + " = " + prime + " + 2x" + n + "^2");
+							// System.out.println(odd + " = " + prime + " + 2x"
+							// + n + "^2");
 							if (((odd - prev) > 2) && isPrime(odd)) {
 								answer = prev + 2;
 								break glass;
@@ -22,6 +24,10 @@ public class PE046 {
 		}
 
 		System.out.println("Answer: " + answer);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	// prime number checking function

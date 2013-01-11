@@ -4,7 +4,7 @@ public class PE031 {
 	private static int[] coinAmount = { 0, 0, 0, 0, 0, 0, 0 };
 
 	public static void main(String args[]) {
-
+		long startTime = System.nanoTime();
 		int coinTotal = 200;
 		int selectedCoin = 6;
 		int solutions = 1;
@@ -27,6 +27,9 @@ public class PE031 {
 
 		System.out.println("Answer: " + solutions);
 
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	private static int getTotal() {

@@ -1,7 +1,7 @@
 public class PE037 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		int primeCounter = 0;
 		int truncatableRL, truncatableLR = 0;
 		int sum = 0;
@@ -11,14 +11,15 @@ public class PE037 {
 				truncatableLR = i;
 
 				do {
-					truncatableLR = (int) (truncatableLR % (Math.pow(10, (String.valueOf(truncatableRL).length() - 1))));
+					truncatableLR = (int) (truncatableLR % (Math.pow(10,
+							(String.valueOf(truncatableRL).length() - 1))));
 					truncatableRL = (truncatableRL / 10);
 
 					if (isPrime(truncatableRL) && isPrime(truncatableLR)) {
 						if (String.valueOf(truncatableRL).length() == 1) {
 							primeCounter++;
 							sum += i;
-							System.out.println("> " + i);
+							//System.out.println("> " + i);
 						}
 					} else {
 						break;
@@ -26,8 +27,12 @@ public class PE037 {
 				} while (String.valueOf(truncatableRL).length() >= 0);
 			}
 		}
-		System.out.println("answer: " + sum);
-		System.out.println("prime counter: " + primeCounter);
+		System.out.println("Answer: " + sum);
+		//System.out.println("prime counter: " + primeCounter);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	// prime number checking function

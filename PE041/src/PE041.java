@@ -7,7 +7,7 @@ public class PE041 {
 	static SortedSet<Integer> elements = new TreeSet<Integer>();
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		String str = "";
 		Integer largestPan = 0;
 
@@ -25,6 +25,9 @@ public class PE041 {
 
 		System.out.println("Answer: " + largestPan);
 
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	public static void permutation(String str) {

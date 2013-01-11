@@ -7,6 +7,7 @@ import java.util.Arrays;
 public class PE022 {
 
 	public static void main(String args[]) {
+		long startTime = System.nanoTime();
 		// read from file
 		// replace unnecessary non-word characters
 		// split the string into items in an array, then sort
@@ -20,6 +21,10 @@ public class PE022 {
 		}
 
 		System.out.println("Total value: " + total);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 
 	}
 

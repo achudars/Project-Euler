@@ -1,7 +1,7 @@
 public class PE026 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		// for [1-1000] <-- answer
 		countDenominators(1000);
 		// for [1-10000]
@@ -9,6 +9,9 @@ public class PE026 {
 		// for [1-10000]
 		// countDenominators(100000);
 
+		long endTime = System.nanoTime();
+		System.out.printf("\nTotal Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	public static int countDenominators(int limit) {

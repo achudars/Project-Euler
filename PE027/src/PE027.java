@@ -1,7 +1,7 @@
 public class PE027 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		// n^2 + an + b, where |a| < 1000 and |b| < 1000
 		int primeCounter = 0;
 		int product = 0;
@@ -28,6 +28,10 @@ public class PE027 {
 		System.out.println("Answer: " + product + "; made of " + coefficientA
 				+ " and " + coefficientB + " having a chain of " + primeCounter
 				+ " primes");
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 
 	}
 

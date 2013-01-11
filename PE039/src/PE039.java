@@ -1,7 +1,7 @@
 public class PE039 {
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		int absolute = 0;
 		int inner = 0;
 		int valueOfP = 0;
@@ -31,9 +31,12 @@ public class PE039 {
 			}
 		}
 
-		System.out.println("numberOfSolutions: " + absolute + " at p = "
+		System.out.println("Answer (Number Of Solutions): " + absolute + " at p = "
 				+ valueOfP);
 
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 }

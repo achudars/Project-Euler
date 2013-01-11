@@ -2,12 +2,12 @@ import java.math.BigInteger;
 
 public class PE003
 {
-    public static void main(String[] args)
-    {
-        BigInteger theLargeNumber = new BigInteger("600851475143");
+    public static void main(String[] args){
+    	long startTime = System.nanoTime();
+    	BigInteger theLargeNumber = new BigInteger("600851475143");
         // although smallest prime is 2, it is odd
         BigInteger rem = new BigInteger("3");
-        int largestPrimerem = 3;
+        int largestPrime = 3;
        
         while(true)
         {
@@ -15,7 +15,7 @@ public class PE003
             while (theLargeNumber.remainder(rem).equals(BigInteger.ZERO))
             { 
                 theLargeNumber = theLargeNumber.divide(rem);
-                largestPrimerem = rem.intValue();
+                largestPrime = rem.intValue();
             }
            
             rem = rem.add(BigInteger.valueOf(2));
@@ -24,6 +24,9 @@ public class PE003
                 break;
         }
        
-        System.out.printf("The largestPrimeremest prime rem is %d\n", largestPrimerem);
+        System.out.printf("Answer: %d\n", largestPrime);
+        long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
     }
 }

@@ -1,8 +1,9 @@
 public class PE040 {
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		StringBuffer result = new StringBuffer();
-		
+
 		for (int i = 0; i < 1000000; i++) {
 			result.append(i);
 		}
@@ -17,6 +18,9 @@ public class PE040 {
 		int Champernowne = d1 * d10 * d100 * d1000 * d10000 * d100000 * d1000000;
 		System.out.println("Answer: " + Champernowne);
 
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 }

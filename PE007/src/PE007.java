@@ -1,18 +1,22 @@
 public class PE007 {
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		int counter = 0;
 		for (int i = 2; i < 1000000; i++) {
 			if (isPrime(i)) {
 				counter++;
 				if (counter == 10001) {
-					System.out.println(i);
+					System.out.println("Answer: " + i);
 					break;
 				}
 
 			}
 
 		}
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 
 	};
 

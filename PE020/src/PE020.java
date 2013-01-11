@@ -3,11 +3,11 @@ import java.math.BigInteger;
 public class PE020 {
 
 	public static void main(String[] args) {
-		
+		long startTime = System.nanoTime();
 		int sumOfDigits = 0;
 		int n = 100;
 		BigInteger number = factorial(n);
-		
+
 		// convert to string
 		String numberAsString = number.toString();
 		// traverse every character in the string array and calculate value
@@ -16,6 +16,10 @@ public class PE020 {
 		}
 
 		System.out.println("Answer: " + sumOfDigits);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 
 	};
 

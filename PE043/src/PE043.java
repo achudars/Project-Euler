@@ -7,7 +7,7 @@ public class PE043 {
 	static SortedSet<String> elements = new TreeSet<String>();
 
 	public static void main(String[] args) {
-
+		long startTime = System.nanoTime();
 		Long sum = 0L;
 
 		permutation("0123456789");
@@ -18,6 +18,9 @@ public class PE043 {
 
 		System.out.println("Answer: " + sum);
 
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 	public static void permutation(String str) {

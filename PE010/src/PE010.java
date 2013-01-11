@@ -1,13 +1,18 @@
 public class PE010 {
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		long sum = 0;
 		for (int i = 2; i <= 2000000; i++) {
 			if (isPrime(i)) {
 				sum += i;
 			}
 		}
-		System.out.println("The answer: " + sum);
+		System.out.println("Answer: " + sum);
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
+
 	};
 
 	// prime number checking function

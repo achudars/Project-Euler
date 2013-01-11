@@ -21,14 +21,21 @@ public class PE018 {
 	
 	public static void main(String[] args) {
 		// traverses the triangle from bottom to top finding the maximum
+		long startTime = System.nanoTime();
 		for (int i = triangle.length - 2; i >= 0; i--) {
 			for (int j = 0; j < triangle[i].length; j++) {
 				// look for the largest
-				triangle[i][j] = triangle[i][j] + (triangle[i + 1][j] < triangle[i + 1][j + 1] ? triangle[i + 1][j + 1]: triangle[i + 1][j]);
+				triangle[i][j] = triangle[i][j]
+						+ (triangle[i + 1][j] < triangle[i + 1][j + 1] ? triangle[i + 1][j + 1]
+								: triangle[i + 1][j]);
 			}
 		}
 
-		System.out.println(triangle[0][0]);
+		System.out.println("Answer: " + triangle[0][0]);
+
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n",
+				((endTime - startTime) / 1000000000.0));
 	}
 
 }

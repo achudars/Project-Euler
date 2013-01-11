@@ -7,26 +7,22 @@ public class PE041 {
 	static SortedSet<Integer> elements = new TreeSet<Integer>();
 
 	public static void main(String[] args) {
-		
+
 		String str = "";
 		Integer largestPan = 0;
-		
-		for(Integer i=1; i<10; i++){
-			str = str+i.toString();
+
+		for (Integer i = 1; i < 10; i++) {
+			str = str + i.toString();
 			permutation(str);
-			
-			for(Integer item : elements){
-				if(isPrime(item) && isPandigital(item) && item > largestPan){
+
+			for (Integer item : elements) {
+				if (isPrime(item) && isPandigital(item) && item > largestPan) {
 					largestPan = item;
 				}
 			}
-			
+
 		}
 
-		
-
-		
-		
 		System.out.println("Answer: " + largestPan);
 
 	}
@@ -60,22 +56,22 @@ public class PE041 {
 
 		return digits == (1 << count) - 1;
 	}
-	
-	// prime number checking function
-		public static boolean isPrime(long n) {
-			if (n < 2)
-				return false;
-			if (n == 2 || n == 3)
-				return true;
-			if (n % 2 == 0 || n % 3 == 0)
-				return false;
-			long sqrtN = (long) Math.sqrt(n) + 1;
-			for (long i = 6L; i <= sqrtN; i += 6) {
-				if (n % (i - 1) == 0 || n % (i + 1) == 0)
-					return false;
-			}
 
+	// prime number checking function
+	public static boolean isPrime(long n) {
+		if (n < 2)
+			return false;
+		if (n == 2 || n == 3)
 			return true;
-		};
+		if (n % 2 == 0 || n % 3 == 0)
+			return false;
+		long sqrtN = (long) Math.sqrt(n) + 1;
+		for (long i = 6L; i <= sqrtN; i += 6) {
+			if (n % (i - 1) == 0 || n % (i + 1) == 0)
+				return false;
+		}
+
+		return true;
+	};
 
 }

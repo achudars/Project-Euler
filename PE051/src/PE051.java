@@ -13,7 +13,7 @@ public class PE051 {
 		primeArray = null;
 		int head = 0;
 		String smallestPrime = "999999";
-
+		
 		for (String p : primes) {
 			for (int i = 0; i < 10; i++) {
 				int position = 1;
@@ -48,6 +48,7 @@ public class PE051 {
 				}
 			}
 		}
+		// *2*3*3
 		System.out.println("Answer: " + smallestPrime);
 
 		long endTime = System.nanoTime();

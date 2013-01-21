@@ -34,7 +34,7 @@ public class PE101 {
 			fits += result;
 		}
 
-		System.out.printf("The sum of FITs is %d", fits);
+		System.out.printf("Answer: %d", fits);
 
 		long endTime = System.nanoTime();
 		System.out.printf("\nTotal Time: %.6f seconds\n",

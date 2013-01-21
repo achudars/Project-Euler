@@ -28,7 +28,7 @@ public class PE109 {
 
 		solveDartsRecursively(50, 0, 1);
 
-		System.out.println(count);
+		System.out.println("Answer: " + count);
 
 		long endTime = System.nanoTime();
 		System.out.printf("Total Time: %.6f seconds\n",

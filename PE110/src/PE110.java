@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class PE108 {
+public class PE110 {
 
 	private static ArrayList<Integer> p = new ArrayList<Integer>();
 	static ArrayList<Long> v = new ArrayList<Long>();
@@ -38,7 +38,7 @@ public class PE108 {
 			if (temp > cc)
 				break;
 			t = numSol(pf(temp));
-			if (t > 1000)
+			if (t > 4000000)
 				v.add(temp);
 			if (t > max)
 				max = t;
